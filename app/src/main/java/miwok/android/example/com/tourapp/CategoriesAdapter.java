@@ -1,5 +1,6 @@
 package miwok.android.example.com.tourapp;
 
+import android.content.Context;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
@@ -9,10 +10,15 @@ import android.support.v4.app.FragmentPagerAdapter;
 
 public class CategoriesAdapter extends FragmentPagerAdapter {
 
-    private String title[] = new String[] {"Eating", "Social", "Shopping", "Historical Buildings" };
 
-    public CategoriesAdapter (FragmentManager fragmentManager) {
+    private Context mcontext;
+    String title[];
+
+
+    public CategoriesAdapter (FragmentManager fragmentManager, Context context) {
         super(fragmentManager);
+        mcontext = context;
+       title  = new String[] {mcontext.getResources().getString(R.string.Eating), mcontext.getResources().getString(R.string.Social), mcontext.getResources().getString(R.string.Shopping), mcontext.getResources().getString(R.string.HistoricalBuildings) };
     }
 
     @Override

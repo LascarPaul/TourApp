@@ -1,6 +1,40 @@
 <resources>
     <string name="app_name">Tour App</string>
     <string name="price">Price:</string>
-
+    <string name="Eating">Eating</string>
+    <string name="Social">Social</string>
+    <string name="Shopping">Shopping</string>
+    <string name="HistoricalBuildings">Historical Buildings</string>
+  <string name="theArtist">the Artist</string>
+    <string name="Adress">Calea Victoriei 147, Sector 1"</string>
+    <string name="url12">https://www.tripadvisor.com/Restaurant_Review-g294458-d3469196-Reviews-The_ARTIST-Bucharest.html</string>
+    <string name="url">https://www.tripadvisor.com/Restaurant_Review-g294458-d3469196-Reviews-The_ARTIST-Bucharest.html</string>
+    <string name="price1">$$$$</string>
+    <string name="Vacamuuu">Vacamuuu</string>
+    <string name="Adress2">Calea Floreasca No. 111</string>
+    <string name="url2">https://www.tripadvisor.com/Restaurant_Review-g294458-d3637747-Reviews-Vacamuuu-Bucharest.html</string>
+    <string name="OSHO">OSHO</string>
+    <string name="Adress3">Boulevardul Primaveri 19-21</string>
+    <string name="url3">https://www.tripadvisor.com/Restaurant_Review-g294458-d2074211-Reviews-OSHO-Bucharest.html</string>
+    <string name="CommunismTour">Communism Tour</string>
+    <string name="description">3-hour Communist history walking tour</string>
+    <string name="url4">https://www.tripadvisor.com/AttractionProductDetail?product=10914P1&amp;d=294458&amp;aidSuffix=xsell&amp;partner=Viator</string>
+    <string name="AFIPalaceCotroceni">AFI Palace Cotroceni</string>
+    <string name="Adress4">Bd vasile Milea No 4</string>
+    <string name="url6">https://www.tripadvisor.com/Attraction_Review-g294458-d3340332-Reviews-AFI_Palace_Cotroceni-Bucharest.html</string>
+    <string name="CarturestiCarusel">Carturesti Carusel</string>
+    <string name="Adress5">Strada Lipscani 55</string>
+    <string name="url7">https://www.tripadvisor.com/Attraction_Review-g294458-d4757849-Reviews-Carturesti_Carusel-Bucharest.html</string>
+    <string name="HerastrauPark">Herastrau Park</string>
+    <string name="Adress7">B-dul Aviatorilor</string>
+    <string name="url8">https://www.tripadvisor.com/Attraction_Review-g294458-d548240-Reviews-Herastrau_Park-Bucharest.html</string>
+    <string name="Free">Free</string>
+    <string name="ExtendedWalkingTourofBucharest">Extended Walking Tour of Bucharest</string>
+    <string name="description2">6-hour walking tour</string>
+    <string name="url9">https://www.tripadvisor.com/AttractionProductDetail?product=11058P1&amp;d=294458&amp;aidSuffix=xsell&amp;partner=Viator</string>
+    <string name="price2">$</string>
+    <string name="WineTasting">Wine Tasting</string>
+    <string name="description6">Romantic experience</string>
+    <string name="url10">https://www.tripadvisor.com/AttractionProductDetail?product=27172P2&amp;d=294458&amp;aidSuffix=xsell&amp;partner=Viator</string>
 
 </resources>

@@ -23,13 +23,13 @@ public class SocialFragment extends Fragment {
         View rootView = inflater.inflate(R.layout.list, container, false);
 
 
-        final ArrayList<POI> POI = new ArrayList<POI>();
-        POI.add(new POI("Herastrau Park", "B-dul Aviatorilor", "https://www.tripadvisor.com/Attraction_Review-g294458-d548240-Reviews-Herastrau_Park-Bucharest.html",  R.drawable.herastrau1, "Free"));
-        POI.add(new POI("Extended Walking Tour of Bucharest", "6-hour walking tour", "https://www.tripadvisor.com/AttractionProductDetail?product=11058P1&d=294458&aidSuffix=xsell&partner=Viator",  R.drawable.tour, "$"));
-        POI.add(new POI("Wine Tasting", "Romantic experience", "https://www.tripadvisor.com/AttractionProductDetail?product=27172P2&d=294458&aidSuffix=xsell&partner=Viator",  R.drawable.wine, "$"));
+        final ArrayList<Location> Location = new ArrayList<Location>();
+        Location.add(new Location(getString(R.string.HerastrauPark), getString(R.string.Adress7), getString(R.string.url8),  R.drawable.herastrau1, getString(R.string.Free)));
+        Location.add(new Location(getString(R.string.ExtendedWalkingTourofBucharest), getString(R.string.description2), getString(R.string.url9),  R.drawable.tour, getString(R.string.price2)));
+        Location.add(new Location(getString(R.string.WineTasting), getString(R.string.description6), getString(R.string.url10),  R.drawable.wine, getString(R.string.price2)));
 
 
-        final POIAdapter adapter = new POIAdapter(getActivity(), POI, R.color.social);
+        final LocationAdapter adapter = new LocationAdapter(getActivity(), Location, R.color.social);
 
         final ListView PoiListView = (ListView) rootView.findViewById(R.id.list);
 
@@ -39,8 +39,8 @@ public class SocialFragment extends Fragment {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position,
                                     long id) {
-                POI PoiPlace = adapter.getItem(position);
-                Uri PoiUrl = Uri.parse(PoiPlace.getUrl());
+                Location locationPlace = adapter.getItem(position);
+                Uri PoiUrl = Uri.parse(locationPlace.getUrl());
                 Intent websiteIntent = new Intent(Intent.ACTION_VIEW, PoiUrl);
                 startActivity(websiteIntent);
             }

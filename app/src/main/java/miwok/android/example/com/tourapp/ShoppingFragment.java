@@ -25,12 +25,12 @@ public class ShoppingFragment extends Fragment {
         View rootView = inflater.inflate(R.layout.list, container, false);
 
 
-        final ArrayList<POI> POI = new ArrayList<POI>();
-        POI.add(new POI("AFI Palace Cotroceni", "Bd vasile Milea No 4", "https://www.tripadvisor.com/Attraction_Review-g294458-d3340332-Reviews-AFI_Palace_Cotroceni-Bucharest.html",  R.drawable.afi, ""));
-        POI.add(new POI("Carturesti Carusel", "Strada Lipscani 55", "https://www.tripadvisor.com/Attraction_Review-g294458-d4757849-Reviews-Carturesti_Carusel-Bucharest.html",  R.drawable.carturesti, "$"));
+        final ArrayList<Location> Location = new ArrayList<Location>();
+        Location.add(new Location(getString(R.string.AFIPalaceCotroceni), getString(R.string.Adress4), getString(R.string.url6),  R.drawable.afi, getString(R.string.price1)));
+        Location.add(new Location(getString(R.string.CarturestiCarusel), getString(R.string.Adress5), getString(R.string.url7),  R.drawable.carturesti, getString(R.string.price1)));
 
 
-        final POIAdapter adapter = new POIAdapter(getActivity(), POI, R.color.historical);
+        final LocationAdapter adapter = new LocationAdapter(getActivity(), Location, R.color.historical);
 
 
         final ListView poiListView = (ListView) rootView.findViewById(R.id.list);
@@ -40,8 +40,8 @@ public class ShoppingFragment extends Fragment {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position,
                                     long id) {
-                POI currentPoi = adapter.getItem(position);
-                Uri PoiUrl = Uri.parse(currentPoi.getUrl());
+                Location currentLocation = adapter.getItem(position);
+                Uri PoiUrl = Uri.parse(currentLocation.getUrl());
                 Intent websiteIntent = new Intent(Intent.ACTION_VIEW, PoiUrl);
                 startActivity(websiteIntent);
             }

@@ -24,14 +24,14 @@ public class EatingFragment extends Fragment {
         View rootView = inflater.inflate(R.layout.list, container, false);
 
 
-        final ArrayList<POI> POI = new ArrayList<POI>();
-        POI.add(new POI("the ARTIST", "Calea Victoriei 147, Sector 1", "https://www.tripadvisor.com/Restaurant_Review-g294458-d3469196-Reviews-The_ARTIST-Bucharest.html",  R.drawable.osho1, "$$$$"));
-        POI.add(new POI("Vacamuuu", " Calea Floreasca No. 111", "https://www.tripadvisor.com/Restaurant_Review-g294458-d3637747-Reviews-Vacamuuu-Bucharest.html",  R.drawable.a2, "$$$$"));
-        POI.add(new POI("OSHO", "Boulevardul Primaveri 19-21", "https://www.tripadvisor.com/Restaurant_Review-g294458-d2074211-Reviews-OSHO-Bucharest.html",  R.drawable.a3, "$$$"));
+        final ArrayList<Location> Location = new ArrayList<Location>();
+        Location.add(new Location(getString(R.string.theArtist) , getString(R.string.Adress), getString(R.string.url12),  R.drawable.osho1, getString(R.string.price1)));
+        Location.add(new Location(getString(R.string.Vacamuuu), getString(R.string.Adress2), getString(R.string.url2),  R.drawable.a2, getString(R.string.price1)));
+        Location.add(new Location(getString(R.string.OSHO), getString(R.string.Adress3), getString(R.string.url3),  R.drawable.a3, getString(R.string.price1)));
 
 
 
-        final POIAdapter adapter = new POIAdapter(getActivity(), POI, R.color.eating);
+        final LocationAdapter adapter = new LocationAdapter(getActivity(), Location, R.color.eating);
 
 
         final ListView poiListView = (ListView) rootView.findViewById(R.id.list);
@@ -41,8 +41,8 @@ public class EatingFragment extends Fragment {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position,
                                     long id) {
-                POI currentPOI = adapter.getItem(position);
-                Uri PoiUrl = Uri.parse(currentPOI.getUrl());
+                Location currentLocation = adapter.getItem(position);
+                Uri PoiUrl = Uri.parse(currentLocation.getUrl());
                 Intent websiteIntent = new Intent(Intent.ACTION_VIEW, PoiUrl);
                 startActivity(websiteIntent);
             }

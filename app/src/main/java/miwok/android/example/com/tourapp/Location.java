@@ -4,7 +4,7 @@ package miwok.android.example.com.tourapp;
  * Created by Paul on 23-Jun-17.
  */
 
-public class POI {
+public class Location {
     private String mName;
 
 
@@ -22,7 +22,7 @@ public class POI {
     private static final int NO_IMAGE_PROVIDED = -1;
 
 
-    public POI(String name, String description, String url, int imageResourceId, String price) {
+    public Location(String name, String description, String url, int imageResourceId, String price) {
         mName = name;
         mDescription = description;
         mUrl = url;

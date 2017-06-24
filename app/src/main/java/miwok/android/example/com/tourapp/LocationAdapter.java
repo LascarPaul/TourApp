@@ -13,12 +13,12 @@ import java.util.ArrayList;
  * Created by Paul on 23-Jun-17.
  */
 
-public class POIAdapter extends ArrayAdapter<POI> {
+public class LocationAdapter extends ArrayAdapter<Location> {
 
     private int mcolorId;
 
-    public POIAdapter(Context context, ArrayList<POI> pPOI, int colorId) {
-        super(context, 0, pPOI);
+    public LocationAdapter(Context context, ArrayList<Location> pLocation, int colorId) {
+        super(context, 0, pLocation);
         mcolorId = colorId;
     }
 
@@ -31,14 +31,14 @@ public class POIAdapter extends ArrayAdapter<POI> {
         }
 
 
-        POI currentPoi = getItem(position);
+        Location currentLocation = getItem(position);
 
 
         TextView name = (TextView) listView.findViewById(R.id.name);
-        name.setText(currentPoi.getName());
+        name.setText(currentLocation.getName());
 
         TextView description = (TextView) listView.findViewById(R.id.description);
-        description.setText(currentPoi.getDescription());
+        description.setText(currentLocation.getDescription());
 
 
         View container = listView.findViewById(R.id.container);
@@ -46,14 +46,14 @@ public class POIAdapter extends ArrayAdapter<POI> {
         container.setBackgroundColor(color);
 
         TextView price = (TextView) listView.findViewById(R.id.price);
-        price.setText(currentPoi.getPrice());
+        price.setText(currentLocation.getPrice());
 
 
         ImageView imageView = (ImageView) listView.findViewById(R.id.image);
 
-        if (currentPoi.hasImage()) {
+        if (currentLocation.hasImage()) {
 
-            imageView.setImageResource(currentPoi.getmImageResourceId());
+            imageView.setImageResource(currentLocation.getmImageResourceId());
 
             imageView.setVisibility(View.VISIBLE);
         } else {
